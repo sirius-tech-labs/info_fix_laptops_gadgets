@@ -1,0 +1,8 @@
+{
+  "name": "Info-Fix Laptop - Premium Nigerian E-Commerce",
+  "description": "A high-trust e-commerce platform for Info-Fix Laptop, specializing in affordable UK-used and new laptops with nationwide delivery across Nigeria. Features a Gemini-powered laptop finder chatbot, persistent cart, and WhatsApp integration.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
