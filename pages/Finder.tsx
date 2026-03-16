@@ -97,7 +97,7 @@ const Finder: React.FC = () => {
   const [messages, setMessages] = useState<Message[]>([
     {
       role: 'bot',
-      text: 'Hello! 👋 I\'m your Wonderful Autos and Tech AI Assistant. Tell me what you need and I\'ll find the perfect solution from our store — with nationwide delivery across Nigeria! What are you looking for today?',
+      text: 'Hello! 👋 I\'m your Wonderful Autos and Tech Smart Assistant. I can help you find the perfect laptop based on your budget and needs — with nationwide delivery across Nigeria! What can I find for you today?',
     }
   ]);
 
@@ -144,7 +144,7 @@ const Finder: React.FC = () => {
               <Bot size={26} />
             </div>
             <div>
-              <h2 className="text-lg font-black tracking-tight">AI Laptop Advisor</h2>
+              <h2 className="text-lg font-black tracking-tight">Smart Laptop Finder</h2>
               <div className="flex items-center gap-1.5">
                 <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
                 <p className="text-gray-400 font-bold">Wonderful Autos and Tech | Lagos, Nigeria</p>
@@ -242,7 +242,7 @@ const Finder: React.FC = () => {
             </button>
           </div>
           <p className="text-[10px] text-gray-400 mt-2 text-center uppercase tracking-widest font-bold flex items-center justify-center gap-1">
-            <Zap size={10} className="text-tech-blue" /> AI-Powered · Powered by Wonderful Autos and Tech
+            <Zap size={10} className="text-tech-blue" /> Smart Matching · Forever Free
           </p>
         </div>
       </div>

@@ -1,104 +1,91 @@
 
-import { GoogleGenAI } from "@google/genai";
-import { Laptop } from "../types";
+import { Laptop, Category } from "../types";
 
 export interface BotReply {
   message: string;             // Plain text part of the reply
   products: Laptop[];          // Matched laptops from inventory (empty if none)
 }
 
+/**
+ * Smart Finder Logic (Free Alternative to Gemini)
+ * Scans inventory for keywords, budget, and brand.
+ */
 export const getLaptopRecommendation = async (
   userInput: string,
   inventory: Laptop[]
 ): Promise<BotReply> => {
-  const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
-  if (!apiKey) {
-    return {
-      message: "⚠️ Our AI Advisor is temporarily disabled because the Gemini API Key is missing. Please add VITE_GEMINI_API_KEY to your .env file to enable this feature!",
-      products: [],
-    };
+  const query = userInput.toLowerCase();
+
+  // 1. Extract Budget (looking for numbers like 300k, 250000, etc.)
+  let maxPrice = Infinity;
+  const kMatch = query.match(/(\d+)\s*k/);
+  const fullMatch = query.match(/(\d{5,})/);
+
+  if (kMatch) {
+    maxPrice = parseInt(kMatch[1]) * 1000;
+  } else if (fullMatch) {
+    maxPrice = parseInt(fullMatch[1]);
   }
 
-  let ai;
-  try {
-    ai = new GoogleGenAI({ apiKey });
-  } catch (error) {
-    console.error("Gemini initialization error:", error);
-    return {
-      message: "There was a problem initializing the AI. Please check your Gemini API Key.",
-      products: [],
-    };
+  // 2. Identify Keywords for Filtering
+  const keywords = {
+    school: ['student', 'school', 'university', 'college', 'assignment', 'study'],
+    coding: ['coding', 'programming', 'developer', 'software', 'python', 'java', 'web'],
+    gaming: ['gaming', 'game', 'gamer', 'nvidia', 'gpu', 'graphics'],
+    business: ['business', 'office', 'corporate', 'work', 'professional'],
+    cheap: ['cheap', 'budget', 'affordable', 'low price'],
+    apple: ['apple', 'macbook', 'mac', 'macos'],
+    hp: ['hp', 'hewlett'],
+    dell: ['dell', 'latitude', 'xps', 'precision'],
+  };
+
+  // 3. Filter Inventory
+  let matches = inventory.filter(l => l.price <= maxPrice);
+
+  // Filter by brand if mentioned
+  if (query.includes('apple') || query.includes('macbook')) {
+    matches = matches.filter(l => l.brand.toLowerCase() === 'apple');
+  } else if (query.includes('hp')) {
+    matches = matches.filter(l => l.brand.toLowerCase() === 'hp');
+  } else if (query.includes('dell')) {
+    matches = matches.filter(l => l.brand.toLowerCase() === 'dell');
   }
 
-  // Provide a slim version of inventory (no base64 images) to keep the prompt small
-  const slimInventory = inventory.map(l => ({
-    id: l.id,
-    name: l.name,
-    brand: l.brand,
-    specs: l.specs,
-    detailedSpecs: l.detailedSpecs,
-    price: l.price,
-    originalPrice: l.originalPrice,
-    category: l.category,
-    condition: l.condition,
-  }));
+  // Filter by use case
+  if (query.match(/(gaming|game|graphics)/)) {
+    matches = matches.filter(l => l.category === Category.GAMING || l.specs.toLowerCase().includes('graphics'));
+  } else if (query.match(/(coding|programming|dev)/)) {
+    matches = matches.filter(l => l.specs.toLowerCase().includes('i7') || l.specs.toLowerCase().includes('16gb') || l.category === Category.BUSINESS || l.category === Category.PROGRAMMING);
+  } else if (query.match(/(student|school)/)) {
+    matches = matches.filter(l => l.category === Category.STUDENT || l.price < 250000);
+  }
 
-  try {
-    const response = await ai.models.generateContent({
-      model: 'gemini-2.0-flash',
-      contents: `You are a friendly and knowledgeable sales expert at Wonderful Autos and Tech in Nigeria.
+  // Sort by relevance (best price for budget)
+  matches.sort((a, b) => b.price - a.price);
 
-Available inventory (JSON):
-${JSON.stringify(slimInventory)}
+  // Take top 3
+  const finalProducts = matches.slice(0, 3);
 
-Customer query: "${userInput}"
-
-INSTRUCTIONS:
-- Suggest 1-3 specific laptops from the inventory that best match the customer's needs and budget.
-- Be warm, concise, and persuasive.
-- Mention prices in Naira (₦).
-- If no budget is mentioned and no products obviously match, ask one follow-up question about budget or use case.
-- Always mention that Wonderful Autos and Tech offers nationwide delivery across Nigeria.
-
-RESPONSE FORMAT (strict JSON — do NOT include any markdown, only raw JSON):
-{
-  "message": "Your friendly 2-3 sentence response here. Do not list product names in the message since they will be shown as cards below.",
-  "productIds": ["id1", "id2"]
-}
-
-If no specific products match or you are asking a follow-up question, use an empty array: "productIds": []`,
-      config: {
-        temperature: 0.7,
-        topP: 0.9,
-      }
-    });
-
-    const rawText = (response.text || '').trim();
-
-    // Strip markdown code fences if Gemini wraps in ```json ... ```
-    const jsonText = rawText.replace(/^```(?:json)?\n?/, '').replace(/\n?```$/, '').trim();
-
-    let parsed: { message: string; productIds: string[] };
-    try {
-      parsed = JSON.parse(jsonText);
-    } catch {
-      // If JSON parsing fails, return the raw text as a plain message
-      return { message: rawText || "I couldn't find a perfect match. Could you tell me your budget?", products: [] };
+  // 4. Generate Message
+  let message = "";
+  if (finalProducts.length > 0) {
+    if (maxPrice !== Infinity) {
+      message = `I found some great options under ₦${maxPrice.toLocaleString()} for you! These are tested, reliable, and ready for nationwide delivery.`;
+    } else {
+      message = `Based on what you're looking for, I highly recommend these laptops. They offer great performance and value!`;
     }
-
-    const matchedProducts = (parsed.productIds || [])
-      .map((id: string) => inventory.find(l => l.id === id))
-      .filter(Boolean) as Laptop[];
-
+  } else {
+    // If no specific match, suggest 3 popular ones
+    const fallbacks = inventory.slice(0, 3);
+    message = `I couldn't find a perfect match for that specific request, but check out these top deals! Alternatively, tell me your budget (e.g., "under 250k").`;
     return {
-      message: parsed.message || "Here are some options for you!",
-      products: matchedProducts,
-    };
-  } catch (error) {
-    console.error("Gemini Error:", error);
-    return {
-      message: "Our AI advisor is temporarily offline. You can browse our full catalog or message us directly on WhatsApp for instant help!",
-      products: [],
+      message,
+      products: fallbacks
     };
   }
+
+  return {
+    message,
+    products: finalProducts
+  };
 };
