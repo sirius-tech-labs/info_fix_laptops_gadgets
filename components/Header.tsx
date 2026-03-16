@@ -1,7 +1,7 @@
 
 import React, { useState, useRef, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { ShoppingCart, MessageCircle, Menu, X, Truck, Bot, Search, Heart, LogIn, LogOut, Settings, ChevronDown, Package } from 'lucide-react';
+import { ShoppingCart, MessageCircle, Menu, X, Truck, Bot, Search, Heart, LogIn, LogOut, Settings, ChevronDown, Package, Scale } from 'lucide-react';
 import { useCart } from '../context/CartContext';
 import { useAuth } from '../context/AuthContext';
 import { WHATSAPP_NUMBER } from '../constants';
@@ -80,6 +80,7 @@ const Header: React.FC = () => {
             <div className="hidden xl:flex space-x-6 items-center">
               <Link to="/" className="text-gray-600 hover:text-tech-blue font-medium transition">Home</Link>
               <Link to="/shop" className="text-gray-600 hover:text-tech-blue font-medium transition">Shop</Link>
+              <Link to="/compare" className="text-gray-600 hover:text-tech-blue font-medium transition">Compare</Link>
               <Link to="/student-deals" className="text-gray-600 hover:text-tech-blue font-medium transition">Student Deals</Link>
             </div>
 
@@ -172,6 +173,14 @@ const Header: React.FC = () => {
                         <Package size={16} className="text-tech-blue" />
                         My Orders
                       </Link>
+                      <Link
+                        to="/track"
+                        onClick={() => setShowUserMenu(false)}
+                        className="flex items-center gap-3 px-4 py-3 text-sm font-bold text-gray-700 hover:bg-gray-50 transition-colors"
+                      >
+                        <Truck size={16} className="text-tech-blue" />
+                        Track Order
+                      </Link>
                       <button
                         onClick={handleSignOut}
                         className="flex items-center gap-3 w-full px-4 py-3 text-sm font-bold text-red-600 hover:bg-red-50 transition-colors"
@@ -219,6 +228,8 @@ const Header: React.FC = () => {
             <div className="grid grid-cols-2 gap-4">
               <Link to="/" onClick={toggleMenu} className="flex flex-col items-center justify-center bg-gray-50 p-4 rounded-2xl text-gray-700 font-bold text-sm">Home</Link>
               <Link to="/shop" onClick={toggleMenu} className="flex flex-col items-center justify-center bg-gray-50 p-4 rounded-2xl text-gray-700 font-bold text-sm">Shop</Link>
+              <Link to="/compare" onClick={toggleMenu} className="flex flex-col items-center justify-center bg-gray-50 p-4 rounded-2xl text-gray-700 font-bold text-sm">Compare</Link>
+              <Link to="/track" onClick={toggleMenu} className="flex flex-col items-center justify-center bg-gray-50 p-4 rounded-2xl text-gray-700 font-bold text-sm">Track Order</Link>
               <Link to="/wishlist" onClick={toggleMenu} className="flex flex-col items-center justify-center bg-gray-50 p-4 rounded-2xl text-gray-700 font-bold text-sm">Wishlist</Link>
               <Link to="/student-deals" onClick={toggleMenu} className="flex flex-col items-center justify-center bg-gray-50 p-4 rounded-2xl text-gray-700 font-bold text-sm">Students</Link>
             </div>
