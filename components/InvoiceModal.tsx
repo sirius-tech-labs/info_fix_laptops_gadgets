@@ -101,7 +101,7 @@ const InvoiceModal: React.FC<InvoiceModalProps> = ({ order, onClose }) => {
           </button>
 
           <button
-            onClick={downloadPDF}
+            onClick={downloadImage}
             disabled={isDownloading}
             className={`w-full sm:flex-1 flex items-center justify-center gap-3 py-4 px-6 rounded-2xl font-black transition active:scale-95 text-lg shadow-lg ${isDownloading
               ? 'bg-gray-200 text-gray-400 cursor-not-allowed'
@@ -136,14 +136,8 @@ const InvoiceModal: React.FC<InvoiceModalProps> = ({ order, onClose }) => {
             {/* Invoice Header */}
             <div className="flex flex-col md:flex-row justify-between items-start border-b-8 border-tech-blue pb-10 mb-12 gap-6">
               <div>
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="w-14 h-14 bg-tech-blue rounded-xl flex items-center justify-center shadow-lg shadow-tech-blue/20">
-                    <span className="text-white font-black text-3xl italic">WAT</span>
-                  </div>
-                  <div>
-                    <span className="text-tech-blue font-black text-3xl tracking-tighter uppercase block leading-none">Wonderful Autos</span>
-                    <span className="text-tech-blue font-black text-3xl tracking-tighter uppercase block leading-none opacity-80">and Tech</span>
-                  </div>
+                <div className="flex items-center mb-6">
+                  <img src="/logo.png" alt="Wonderful Autos and Tech" className="h-20 w-auto object-contain" />
                 </div>
                 <div className="space-y-1">
                   <p className="text-xs font-black text-gray-400 uppercase tracking-widest">Global Solutions Provider</p>

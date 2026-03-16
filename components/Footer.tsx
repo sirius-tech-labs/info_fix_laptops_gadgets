@@ -8,11 +8,8 @@ const Footer: React.FC = () => {
     <footer className="bg-tech-blue text-white pt-20 pb-10">
       <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
         <div>
-          <div className="flex items-center gap-2 mb-6">
-            <div className="w-10 h-10 bg-white rounded flex items-center justify-center">
-              <span className="text-tech-blue font-black text-xl italic">WAT</span>
-            </div>
-            <span className="text-white font-extrabold text-xl tracking-tight">Wonderful Autos and Tech</span>
+          <div className="flex items-center mb-6">
+            <img src="/logo-white.png" alt="Wonderful Autos and Tech" className="h-14 w-auto object-contain" />
           </div>
           <p className="text-blue-100 text-sm leading-relaxed mb-6">
             Premium Nigerian retailer specializing in autos and high-quality tech solutions. We prioritize reliability, trust, and exceptional nationwide delivery.

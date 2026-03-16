@@ -29,13 +29,8 @@ const Login: React.FC = () => {
 
             <div className="relative bg-white rounded-[2.5rem] shadow-2xl p-10 max-w-md w-full text-center">
                 {/* Logo */}
-                <div className="flex items-center justify-center gap-3 mb-8">
-                    <div className="w-14 h-14 bg-tech-blue rounded-2xl flex items-center justify-center shadow-lg shadow-tech-blue/30">
-                        <span className="text-white font-black text-2xl italic">WAT</span>
-                    </div>
-                    <div className="text-left">
-                        <p className="font-black text-2xl text-tech-blue leading-none">Wonderful Autos and Tech</p>
-                    </div>
+                <div className="flex items-center justify-center mb-8">
+                    <img src="/logo.png" alt="Wonderful Autos and Tech" className="h-20 w-auto object-contain" />
                 </div>
 
                 <div className="w-12 h-1 bg-tech-blue rounded-full mx-auto mb-8" />

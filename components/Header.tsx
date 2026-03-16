@@ -56,11 +56,8 @@ const Header: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-16 items-center">
             {/* Logo */}
-            <Link to="/" className="flex items-center gap-2 flex-shrink-0">
-              <div className="w-10 h-10 bg-tech-blue rounded flex items-center justify-center">
-                <span className="text-white font-black text-xl italic drop-shadow-[0_2px_2px_rgba(0,0,0,0.3)]">WAT</span>
-              </div>
-              <span className="font-extrabold text-xl tracking-tight hidden lg:block text-tech-blue">Wonderful Autos and Tech</span>
+            <Link to="/" className="flex items-center flex-shrink-0">
+              <img src="/logo.png" alt="Wonderful Autos and Tech" className="h-12 w-auto object-contain" />
             </Link>
 
             {/* Global Search Bar */}
