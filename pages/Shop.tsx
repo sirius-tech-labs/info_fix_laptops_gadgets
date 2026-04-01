@@ -50,7 +50,7 @@ const Shop: React.FC = () => {
   return (
     <div className="max-w-7xl mx-auto px-4 py-12">
       <Helmet>
-        <title>Shop | Wonderful Autos and Tech Nigeria Catalog</title>
+        <title>Shop | Giant edge technology Nigeria Catalog</title>
         <meta name="description" content="Browse our wide range of UK-used and new laptops. Filter by category: Student, Business, Gaming, and more. Best prices in Nigeria." />
       </Helmet>
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-12">

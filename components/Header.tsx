@@ -56,8 +56,12 @@ const Header: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-16 items-center">
             {/* Logo */}
-            <Link to="/" className="flex items-center flex-shrink-0">
-              <img src="/logo.png" alt="Wonderful Autos and Tech" className="h-12 w-auto object-contain" />
+            <Link to="/" className="flex items-center flex-shrink-0 group gap-3">
+              <img src="/logo.jpg?v=2" alt="Yustech Logic System Service" className="h-16 w-auto object-contain mix-blend-multiply group-hover:scale-105 transition-transform" />
+              <div className="hidden lg:flex flex-col -space-y-1">
+                <span className="text-lg font-black text-gray-900 tracking-tighter uppercase leading-none">Yustech Logic</span>
+                <span className="text-[10px] font-black text-brand-primary tracking-widest uppercase leading-none">System Services</span>
+              </div>
             </Link>
 
             {/* Global Search Bar */}

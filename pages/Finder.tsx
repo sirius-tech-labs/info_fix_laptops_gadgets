@@ -97,7 +97,7 @@ const Finder: React.FC = () => {
   const [messages, setMessages] = useState<Message[]>([
     {
       role: 'bot',
-      text: 'Hello! 👋 I\'m your Wonderful Autos and Tech Smart Assistant. I can help you find the perfect laptop based on your budget and needs — with nationwide delivery across Nigeria! What can I find for you today?',
+      text: 'Hello! 👋 I\'m your Giant edge technology Smart Assistant. I can help you find the perfect laptop based on your budget and needs — with nationwide delivery across Nigeria! What can I find for you today?',
     }
   ]);
 
@@ -147,7 +147,7 @@ const Finder: React.FC = () => {
               <h2 className="text-lg font-black tracking-tight">Smart Laptop Finder</h2>
               <div className="flex items-center gap-1.5">
                 <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-                <p className="text-gray-400 font-bold">Wonderful Autos and Tech | Lagos, Nigeria</p>
+                <p className="text-gray-400 font-bold">Giant edge technology | Ondo state, Nigeria</p>
               </div>
             </div>
           </div>

@@ -89,9 +89,9 @@ const ProductDetails: React.FC = () => {
   return (
     <div className="bg-white min-h-screen pb-20">
       <Helmet>
-        <title>{laptop.name} | Wonderful Autos and Tech Nigeria</title>
+        <title>{laptop.name} | Giant edge technology Nigeria</title>
         <meta name="description" content={`${laptop.name} - ${laptop.specs}. ${laptop.description?.substring(0, 150)}...`} />
-        <meta property="og:title" content={`${laptop.name} - Wonderful Autos and Tech`} />
+        <meta property="og:title" content={`${laptop.name} - Giant edge technology`} />
         <meta property="og:image" content={laptop.image} />
       </Helmet>
       {/* Breadcrumb & Back */}

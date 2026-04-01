@@ -1,4 +1,4 @@
-// Basic Service Worker for Wonderful Autos and Tech PWA
+// Basic Service Worker for Giant edge technology PWA
 const CACHE_NAME = 'wat-cache-v1';
 const OFFLINE_URL = '/';
 

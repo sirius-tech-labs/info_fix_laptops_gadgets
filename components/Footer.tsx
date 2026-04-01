@@ -9,10 +9,10 @@ const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
         <div>
           <div className="flex items-center mb-6">
-            <img src="/logo-white.png" alt="Wonderful Autos and Tech" className="h-14 w-auto object-contain" />
+            <img src="/logo.jpg?v=2" alt="Giant edge technology" className="h-16 w-auto object-cover rounded-md" />
           </div>
           <p className="text-blue-100 text-sm leading-relaxed mb-6">
-            Premium Nigerian retailer specializing in autos and high-quality tech solutions. We prioritize reliability, trust, and exceptional nationwide delivery.
+            Premium Nigerian retailer specializing in high-quality tech solutions, laptop repairs, and digital services. We prioritize reliability, trust, and exceptional nationwide delivery.
           </p>
           <div className="flex gap-4">
             <a href="#" className="p-2 bg-blue-900/50 rounded-lg hover:bg-blue-800 transition"><Facebook size={18} /></a>
@@ -40,31 +40,13 @@ const Footer: React.FC = () => {
               <div className="flex items-start gap-3">
                 <MapPin size={18} className="text-blue-300 mt-1 flex-shrink-0" />
                 <div>
-                  <p className="font-bold text-white mb-1">Lagos Address</p>
-                  <p className="text-xs leading-relaxed">Goshen shopping complex, Berger, Lagos</p>
+                  <p className="font-bold text-white mb-1">Office Address</p>
+                  <p className="text-xs leading-relaxed">number 21 kuteyi street, owalusin iwaro oka akoko Ondo state</p>
                 </div>
               </div>
             </li>
-            <li>
-              <div className="flex items-start gap-3">
-                <MapPin size={18} className="text-blue-300 mt-1 flex-shrink-0" />
-                <div>
-                  <p className="font-bold text-white mb-1">Osogbo Office</p>
-                  <p className="text-xs leading-relaxed">Wonderful Autos-Tech Limited building, adjacent honesty cooperative, Akindeko market area, Alekuwodo, Osogbo, Osun state</p>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div className="flex items-start gap-3">
-                <MapPin size={18} className="text-blue-300 mt-1 flex-shrink-0" />
-                <div>
-                  <p className="font-bold text-white mb-1">Ibadan Office</p>
-                  <p className="text-xs leading-relaxed">Lanre shopping complex, beside Wem Bank, along Gbagi market road, Iwo road, Ibadan</p>
-                </div>
-              </div>
-            </li>
-            <li className="flex items-center gap-3 mt-6"><Phone size={18} className="text-blue-300" /> <span>+234 706 475 7296</span></li>
-            <li className="flex items-center gap-3"><Mail size={18} className="text-blue-300" /> <span>wonderfulautosandtech@gmail.com</span></li>
+            <li className="flex items-center gap-3 mt-6"><Phone size={18} className="text-blue-300" /> <span>09166669209</span></li>
+            <li className="flex items-center gap-3"><Mail size={18} className="text-blue-300" /> <span>bellojosh500@gmail.com</span></li>
           </ul>
         </div>
 
@@ -87,7 +69,7 @@ const Footer: React.FC = () => {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 pt-10 border-t border-blue-800/50 flex flex-col md:flex-row justify-between items-center gap-4 text-blue-300 text-xs">
-        <p>&copy; {new Date().getFullYear()} Wonderful Autos and Tech Nigeria. Trusted Retailer. All Rights Reserved.</p>
+        <p>&copy; {new Date().getFullYear()} Giant edge technology. Trusted Retailer. All Rights Reserved.</p>
       </div>
     </footer>
   );

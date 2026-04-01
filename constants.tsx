@@ -1,7 +1,7 @@
 
 import { Category, Laptop, Testimonial } from './types';
 
-export const WHATSAPP_NUMBER = "2347064757296";
+export const WHATSAPP_NUMBER = "2349166669209";
 export const GOOGLE_FORM_URL = "https://docs.google.com/forms/d/e/.../viewform";
 
 // Reliable Unsplash IDs for laptops
@@ -266,9 +266,9 @@ export const LAPTOPS: Laptop[] = [
 ];
 
 export const TESTIMONIALS: Testimonial[] = [
-  { id: '1', name: 'Tunde Adebayo', location: 'Lagos', text: 'Wonderful Autos and Tech delivered my HP EliteBook to Ikeja within 24 hours. The condition was exactly as described. Clean UK-used machine!', rating: 5 },
+  { id: '1', name: 'Tunde Adebayo', location: 'Lagos', text: 'Giant edge technology delivered my HP EliteBook to Ikeja within 24 hours. The condition was exactly as described. Clean UK-used machine!', rating: 5 },
   { id: '2', name: 'Chioma Okeke', location: 'Abuja', text: 'Bought a ThinkPad for my coding bootcamp. Reliable service and the price was the best I found in Nigeria. No issues.', rating: 5 },
-  { id: '3', name: 'Musa Ibrahim', location: 'Port Harcourt', text: 'Was worried about delivery but the packaging was very secure. Laptop arrived in perfect state. Highly trust Wonderful Autos and Tech.', rating: 5 },
+  { id: '3', name: 'Musa Ibrahim', location: 'Port Harcourt', text: 'Was worried about delivery but the packaging was very secure. Laptop arrived in perfect state. Highly trust Giant edge technology.', rating: 5 },
   { id: '4', name: 'Adaeze Nwankwo', location: 'Enugu', text: 'I ordered the Dell Latitude 7490 for my office work. The 16GB RAM handles everything I throw at it. Battery still lasts 4+ hours. Amazing value!', rating: 5 },
   { id: '5', name: 'Femi Ogunlade', location: 'Ibadan', text: 'Third laptop I am buying from WAT. My whole family now uses their laptops. The student deals are unbeatable in Nigeria.', rating: 5 },
   { id: '6', name: 'Hauwa Bello', location: 'Kaduna', text: 'The AI Advisor recommended the perfect laptop for my daughter. She uses it for school and it runs smoothly. Great customer service too.', rating: 4 },

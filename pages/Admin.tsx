@@ -202,7 +202,7 @@ const Admin: React.FC = () => {
       detailedSpecs,
       specs: newLaptop.specs || autoShortSpec,
       originalPrice: newLaptop.originalPrice || (newLaptop.price ? Math.round(newLaptop.price * 1.25) : 0),
-      description: `Premium ${newLaptop.condition} ${newLaptop.name}. Verified and tested by Wonderful Autos and Tech engineers for the Nigerian market. Ready for immediate delivery.`
+      description: `Premium ${newLaptop.condition} ${newLaptop.name}. Verified and tested by Giant edge technology engineers for the Nigerian market. Ready for immediate delivery.`
     } as Laptop;
 
     addInventoryItem(laptopToAdd);

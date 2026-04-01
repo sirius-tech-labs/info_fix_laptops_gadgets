@@ -25,7 +25,7 @@ const InvoiceModal: React.FC<InvoiceModalProps> = ({ order, onClose }) => {
   const [isDownloading, setIsDownloading] = useState(false);
 
   const openWhatsApp = () => {
-    let message = `*NEW ORDER FROM WONDERFUL AUTOS AND TECH*%0A%0A`;
+    let message = `*NEW ORDER FROM GIANT EDGE TECHNOLOGY*%0A%0A`;
     message += `*Order ID:* ${order.id}%0A`;
     message += `*Name:* ${order.customerName}%0A`;
     message += `*Total:* ${formatPrice(order.totalAmount)}%0A%0A`;
@@ -58,7 +58,7 @@ const InvoiceModal: React.FC<InvoiceModalProps> = ({ order, onClose }) => {
       const imgData = canvas.toDataURL('image/jpeg', 0.95);
       const link = document.createElement('a');
       link.href = imgData;
-      link.download = `Wonderful_Autos_Invoice_${order.id.slice(-8)}.jpg`;
+      link.download = `Giant_Edge_Invoice_${order.id.slice(-8)}.jpg`;
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
@@ -137,12 +137,12 @@ const InvoiceModal: React.FC<InvoiceModalProps> = ({ order, onClose }) => {
             <div className="flex flex-col md:flex-row justify-between items-start border-b-8 border-tech-blue pb-10 mb-12 gap-6">
               <div>
                 <div className="flex items-center mb-6">
-                  <img src="/logo.png" alt="Wonderful Autos and Tech" className="h-20 w-auto object-contain" />
+                  <img src="/logo.png" alt="Giant edge technology" className="h-20 w-auto object-contain" />
                 </div>
                 <div className="space-y-1">
                   <p className="text-xs font-black text-gray-400 uppercase tracking-widest">Global Solutions Provider</p>
-                  <p className="text-sm font-bold text-gray-600">Lagos | Osogbo | Ibadan | Nigeria</p>
-                  <p className="text-sm font-black text-tech-blue underline underline-offset-4">wonderfulautosandtech@gmail.com</p>
+                  <p className="text-sm font-bold text-gray-600">Ondo State | Nigeria</p>
+                  <p className="text-sm font-black text-tech-blue underline underline-offset-4">bellojosh500@gmail.com</p>
                 </div>
               </div>
               <div className="text-left md:text-right w-full md:w-auto">
@@ -208,7 +208,7 @@ const InvoiceModal: React.FC<InvoiceModalProps> = ({ order, onClose }) => {
               <div className="bg-blue-50/50 p-8 rounded-[2rem] border border-blue-100/50 self-start">
                 <h4 className="text-[10px] font-black text-tech-blue uppercase tracking-widest mb-4">Official Guarantee</h4>
                 <p className="text-xs text-blue-900/60 font-bold italic leading-relaxed">
-                  "We certify that this invoice represents genuine premium stock. Quality is our contract with you. Welcome to the Wonderful community."
+                  "We certify that this invoice represents genuine premium stock. Quality is our contract with you. Welcome to the Giant edge community."
                 </p>
               </div>
               <div className="space-y-4">
@@ -239,8 +239,8 @@ const InvoiceModal: React.FC<InvoiceModalProps> = ({ order, onClose }) => {
                 <div className="text-right flex-grow">
                   <p className="text-sm font-black text-gray-900 mb-2 italic">Building Trust, For Over a Decade.</p>
                   <p className="text-[10px] text-gray-400 font-bold leading-relaxed max-w-sm ml-auto">
-                    Wonderful Autos and Tech Limited. Lagos, Osogbo, Ibadan. <br />
-                    Orders are processed within 24-48 hours. WhatsApp Support: +234 706 475 7296.
+                    Giant edge technology. number 21 kuteyi street, owalusin iwaro oka akoko Ondo state. <br />
+                    Orders are processed within 24-48 hours. WhatsApp Support: 09166669209.
                   </p>
                 </div>
               </div>

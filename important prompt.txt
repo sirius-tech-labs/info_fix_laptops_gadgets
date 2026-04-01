@@ -1,0 +1,1 @@
+Use clean Tailwind CSS and ensure the site is fully responsive for iPhones.dd "unique high-quality sections" or use a specific library like Framer Motion for a little bit of "wow" factor (animations)

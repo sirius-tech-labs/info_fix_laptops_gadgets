@@ -109,7 +109,7 @@ const Home: React.FC = () => {
   return (
     <div className="space-y-12 md:space-y-24 pb-20 overflow-x-hidden">
       <Helmet>
-        <title>Wonderful Autos and Tech | Premium Tech Store Nigeria</title>
+        <title>Giant edge technology | Premium Tech Store Nigeria</title>
         <meta name="description" content="Buy affordable, high-quality UK-used and new laptops in Nigeria. Nationwide delivery, tested hardware, and trusted service in Ikeja Computer Village." />
       </Helmet>
       {/* Hero Section */}
@@ -132,7 +132,7 @@ const Home: React.FC = () => {
               </h1>
               <p className="text-lg md:text-2xl text-blue-100 mb-8 md:mb-12 font-medium leading-relaxed max-w-xl">
                 Grade A+ UK-Used machines starting from <span className="text-white font-black underline">₦165,000</span>. <br className="hidden md:block" />
-                Tested by Wonderful Autos and Tech Engineers. 12-Months Support.
+                Tested by Giant edge technology Engineers. 12-Months Support.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 md:gap-5">
                 <Link to="/shop" className="bg-white text-tech-blue px-8 md:px-12 py-5 md:py-6 rounded-2xl font-black text-center hover:bg-gray-100 transition shadow-2xl flex items-center justify-center gap-2 group text-base md:text-lg">
@@ -146,7 +146,7 @@ const Home: React.FC = () => {
               <div className="mt-8 md:mt-12 flex items-center gap-4 md:gap-8 opacity-70 flex-wrap">
                 <div className="flex items-center gap-2 text-xs md:text-sm font-bold"><CheckCircle2 size={16} className="text-green-400" /> <span>Pay on Delivery</span></div>
                 <div className="flex items-center gap-2 text-xs md:text-sm font-bold"><CheckCircle2 size={16} className="text-green-400" /> <span>Tested Hardware</span></div>
-                <div className="flex items-center gap-2 text-xs md:text-sm font-bold"><CheckCircle2 size={16} className="text-green-400" /> <span>Lagos, Osun & Oyo Offices</span></div>
+                <div className="flex items-center gap-2 text-xs md:text-sm font-bold"><CheckCircle2 size={16} className="text-green-400" /> <span>Ondo state Office</span></div>
               </div>
             </div>
 
@@ -206,11 +206,11 @@ const Home: React.FC = () => {
       </div>
 
       {/* Trust & Psychological Purchase Triggers Section */}
-      <section className="max-w-7xl mx-auto px-4">
+      <section className="max-w-7xl mx-auto px-4 mt-20">
         <div className="bg-tech-blue text-white rounded-[3rem] md:rounded-[4rem] p-8 md:p-24 overflow-hidden relative shadow-2xl">
           <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 items-center">
             <div>
-              <h2 className="text-3xl md:text-6xl font-black mb-8 md:mb-10 leading-[1.1] tracking-tighter">Why Thousands Choose Wonderful Autos and Tech</h2>
+              <h2 className="text-3xl md:text-6xl font-black mb-8 md:mb-10 leading-[1.1] tracking-tighter">Why Thousands Choose Giant edge technology</h2>
               <div className="space-y-6 md:space-y-8">
                 <div className="flex gap-4 md:gap-6">
                   <div className="bg-blue-500/20 p-3 md:p-4 rounded-2xl md:rounded-3xl h-fit border border-white/5 shadow-inner flex-shrink-0"><ShieldCheck className="text-blue-400" size={28} /></div>
@@ -223,7 +223,7 @@ const Home: React.FC = () => {
                   <div className="bg-blue-500/20 p-3 md:p-4 rounded-2xl md:rounded-3xl h-fit border border-white/5 shadow-inner flex-shrink-0"><MapPin className="text-blue-400" size={28} /></div>
                   <div>
                     <h4 className="font-black text-lg md:text-xl mb-1">Physical Presence in 3 States</h4>
-                    <p className="text-blue-100/70 text-xs md:text-sm leading-relaxed">We are not "ghost" sellers. Visit our mega-stores in Lagos (Berger), Osogbo (Alekuwodo), or Ibadan (Iwo Road) to see and test before you pay.</p>
+                    <p className="text-blue-100/70 text-xs md:text-sm leading-relaxed">We are not "ghost" sellers. Visit our store at number 21 kuteyi street, owalusin iwaro oka akoko Ondo state to see and test before you pay.</p>
                   </div>
                 </div>
                 <div className="flex gap-4 md:gap-6">
@@ -247,7 +247,7 @@ const Home: React.FC = () => {
                     <div className="w-10 h-10 md:w-14 md:h-14 bg-blue-50 rounded-full flex items-center justify-center font-black text-tech-blue text-base md:text-xl border-2 border-white shadow-sm">EE</div>
                     <div>
                       <p className="font-black text-tech-blue not-italic text-base md:text-lg">Engr. Emeka</p>
-                      <p className="text-[9px] md:text-[10px] uppercase font-black text-gray-400 tracking-widest">Chief Tech, Wonderful Autos and Tech</p>
+                      <p className="text-[9px] md:text-[10px] uppercase font-black text-gray-400 tracking-widest">Chief Tech, Giant edge technology</p>
                     </div>
                   </div>
                 </div>

@@ -103,7 +103,7 @@ const OrderTracking: React.FC = () => {
     return (
         <div className="max-w-3xl mx-auto px-4 py-12 min-h-[70vh]">
             <Helmet>
-                <title>Track Your Order | Wonderful Autos and Tech</title>
+                <title>Track Your Order | Giant edge technology</title>
                 <meta name="description" content="Track your laptop order status in real-time. See if your order has been placed, is being processed, shipped, or delivered." />
             </Helmet>
 
@@ -249,8 +249,8 @@ const OrderTracking: React.FC = () => {
                                     return (
                                         <div key={step.key} className="relative flex flex-col items-center z-10">
                                             <div className={`w-10 h-10 rounded-full flex items-center justify-center transition-all duration-500 ${isActive
-                                                    ? 'bg-tech-blue text-white shadow-lg shadow-blue-200'
-                                                    : 'bg-gray-100 text-gray-400'
+                                                ? 'bg-tech-blue text-white shadow-lg shadow-blue-200'
+                                                : 'bg-gray-100 text-gray-400'
                                                 } ${isCurrent ? 'ring-4 ring-blue-100 scale-110' : ''}`}>
                                                 <Icon size={18} />
                                             </div>
