@@ -111,39 +111,37 @@ const Home: React.FC = () => {
         <meta name="description" content="Buy affordable, high-quality UK-used and new laptops in Nigeria. Nationwide delivery, tested hardware, and trusted service in Ikeja Computer Village." />
       </Helmet>
       {/* Hero Section */}
-      <section className="relative bg-gray-50 pt-20 pb-16 lg:pt-32 lg:pb-24 overflow-hidden border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-8">
-            <div className="w-full lg:w-1/2 flex flex-col items-center lg:items-start text-center lg:text-left">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-gray-900 leading-tight tracking-tight mb-6">
-                Discover the Perfect Laptop for Your Lifestyle
-              </h1>
-              <p className="text-lg text-gray-600 mb-8 max-w-lg leading-relaxed">
-                Explore our extensive collection of high-performance laptops. From powerful gaming rigs to sleek business notebooks, we have the ideal machine to elevate your productivity and entertainment.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-                <Link to="/shop" className="bg-tech-blue text-white px-8 py-4 rounded-xl font-bold text-center hover:bg-blue-900 transition-colors shadow-lg shadow-tech-blue/30 active:scale-95 flex items-center justify-center gap-2">
-                  Shop Now
-                </Link>
-                <Link to="/finder" className="bg-white text-gray-700 border border-gray-200 px-8 py-4 rounded-xl font-bold text-center hover:bg-gray-50 hover:border-gray-300 transition-colors active:scale-95 flex items-center justify-center gap-2">
-                  Use Smart Finder
-                </Link>
-              </div>
-            </div>
+      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-[#020617]">
+        {/* Background Coffee Shop Lady Image */}
+        <div
+          className="absolute inset-0 z-0 opacity-40 bg-center bg-cover bg-no-repeat"
+          style={{ backgroundImage: "url('/coffee_shop_lady.png')" }}
+        />
 
-            <div className="w-full lg:w-1/2 relative flex justify-center lg:justify-end">
-              <div className="relative w-full max-w-lg">
-                {/* Decorative background shapes */}
-                <div className="absolute top-0 -left-4 w-72 h-72 bg-blue-400/10 rounded-full mix-blend-multiply filter blur-2xl opacity-70"></div>
-                <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-500/10 rounded-full mix-blend-multiply filter blur-2xl opacity-70"></div>
-                <img
-                  src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&q=80&w=1000"
-                  alt="Premium Laptop Collection"
-                  className="relative z-10 w-full h-auto object-cover rounded-2xl shadow-2xl transform rotate-[-2deg] hover:rotate-0 transition-transform duration-500"
-                />
-              </div>
-            </div>
-          </div>
+        {/* Gradients & Glow for Seamless Blending */}
+        <div className="absolute inset-0 z-0 bg-gradient-to-b from-[#020617] via-[#020617]/50 to-[#020617] opacity-100" />
+        <div className="absolute inset-0 z-0 bg-gradient-to-r from-[#020617] via-transparent to-[#020617] opacity-90" />
+
+        {/* Central glowing rings (Saki-inspired) but in Tech Blue */}
+        <div className="absolute top-[55%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[300px] bg-tech-blue/20 blur-[120px] rounded-[100%] z-0" />
+        <div className="absolute top-[60%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[130px] border border-blue-500/30 rounded-[100%] z-0 shadow-[0_0_60px_rgba(59,130,246,0.5)]" />
+        <div className="absolute top-[60%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[750px] h-[180px] border border-blue-500/10 rounded-[100%] z-0" />
+
+        {/* Content */}
+        <div className="max-w-4xl mx-auto px-4 relative z-10 text-center flex flex-col items-center mt-10">
+          <h1 className="text-5xl md:text-7xl lg:text-[5.5rem] font-medium text-white leading-[1.1] tracking-tight mb-8 drop-shadow-2xl font-sans">
+            Powered by <br />
+            Innovation, Perfected <br />
+            with <span className="inline-flex items-center bg-tech-blue/20 rounded-2xl px-3 py-1 border border-tech-blue/30 backdrop-blur-sm -mb-2">Technology</span>
+          </h1>
+
+          <p className="text-sm md:text-base text-gray-300 font-medium mb-12 max-w-xl mx-auto leading-relaxed drop-shadow-lg">
+            At Giant edge technology, we blend modern innovation with trusted reliability to elevate your daily workflow, crafting laptops for extraordinary moments.
+          </p>
+
+          <Link to="/shop" className="bg-white text-black px-8 py-3.5 rounded-full text-sm font-bold hover:bg-gray-200 transition-colors shadow-[0_0_30px_rgba(255,255,255,0.3)] flex items-center justify-center gap-2 group">
+            Shop Catalog <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="group-hover:translate-y-1 transition-transform"><path d="M12 5v14M19 12l-7 7-7-7" /></svg>
+          </Link>
         </div>
       </section>
 
