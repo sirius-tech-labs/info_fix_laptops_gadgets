@@ -104,8 +104,6 @@ const Home: React.FC = () => {
     { title: "Budget Friendly", cat: Category.BUDGET },
   ];
 
-  const hotToday = inventory.slice(0, 3);
-
   return (
     <div className="space-y-12 md:space-y-24 pb-20 overflow-x-hidden">
       <Helmet>
@@ -113,78 +111,37 @@ const Home: React.FC = () => {
         <meta name="description" content="Buy affordable, high-quality UK-used and new laptops in Nigeria. Nationwide delivery, tested hardware, and trusted service in Ikeja Computer Village." />
       </Helmet>
       {/* Hero Section */}
-      <section className="relative bg-tech-blue py-12 lg:py-28 overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 right-0 w-96 h-96 bg-white rounded-full -mr-20 -mt-20 blur-3xl"></div>
-          <div className="absolute bottom-0 left-0 w-64 h-64 bg-white rounded-full -ml-10 -mb-10 blur-2xl"></div>
-        </div>
+      <section className="relative bg-gray-50 pt-20 pb-16 lg:pt-32 lg:pb-24 overflow-hidden border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="flex flex-col lg:flex-row items-center gap-8 md:gap-12">
-            <div className="max-w-2xl text-white">
-              <div className="inline-flex items-center gap-2 bg-blue-500/30 border border-blue-400/30 px-3 md:px-4 py-1.5 rounded-full text-[9px] md:text-[10px] font-black uppercase tracking-wider mb-6 md:mb-8">
-                <Verified size={14} className="text-blue-300" />
-                Building Trust, For Over a Decade
-              </div>
-              <h1 className="text-4xl md:text-8xl font-black mb-6 md:mb-8 leading-[1.1] tracking-tighter">
-                Premium Laptops. <br />
-                <span className="text-blue-400 underline decoration-white/20">Slash Prices.</span> <br />
-                No Regrets.
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-8">
+            <div className="w-full lg:w-1/2 flex flex-col items-center lg:items-start text-center lg:text-left">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-gray-900 leading-tight tracking-tight mb-6">
+                Discover the Perfect Laptop for Your Lifestyle
               </h1>
-              <p className="text-lg md:text-2xl text-blue-100 mb-8 md:mb-12 font-medium leading-relaxed max-w-xl">
-                Grade A+ UK-Used machines starting from <span className="text-white font-black underline">₦165,000</span>. <br className="hidden md:block" />
-                Tested by Giant edge technology Engineers. 12-Months Support.
+              <p className="text-lg text-gray-600 mb-8 max-w-lg leading-relaxed">
+                Explore our extensive collection of high-performance laptops. From powerful gaming rigs to sleek business notebooks, we have the ideal machine to elevate your productivity and entertainment.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 md:gap-5">
-                <Link to="/shop" className="bg-white text-tech-blue px-8 md:px-12 py-5 md:py-6 rounded-2xl font-black text-center hover:bg-gray-100 transition shadow-2xl flex items-center justify-center gap-2 group text-base md:text-lg">
-                  Start Shopping <Zap size={20} className="fill-tech-blue group-hover:scale-125 transition" />
+              <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+                <Link to="/shop" className="bg-tech-blue text-white px-8 py-4 rounded-xl font-bold text-center hover:bg-blue-900 transition-colors shadow-lg shadow-tech-blue/30 active:scale-95 flex items-center justify-center gap-2">
+                  Shop Now
                 </Link>
-                <Link to="/finder" className="bg-transparent border-2 border-white/30 text-white px-8 md:px-12 py-5 md:py-6 rounded-2xl font-black text-center hover:bg-white/10 transition flex items-center justify-center gap-2 backdrop-blur-sm text-base md:text-lg">
-                  <Search size={20} />
-                  AI Advisor
+                <Link to="/finder" className="bg-white text-gray-700 border border-gray-200 px-8 py-4 rounded-xl font-bold text-center hover:bg-gray-50 hover:border-gray-300 transition-colors active:scale-95 flex items-center justify-center gap-2">
+                  Use Smart Finder
                 </Link>
-              </div>
-              <div className="mt-8 md:mt-12 flex items-center gap-4 md:gap-8 opacity-70 flex-wrap">
-                <div className="flex items-center gap-2 text-xs md:text-sm font-bold"><CheckCircle2 size={16} className="text-green-400" /> <span>Pay on Delivery</span></div>
-                <div className="flex items-center gap-2 text-xs md:text-sm font-bold"><CheckCircle2 size={16} className="text-green-400" /> <span>Tested Hardware</span></div>
-                <div className="flex items-center gap-2 text-xs md:text-sm font-bold"><CheckCircle2 size={16} className="text-green-400" /> <span>Ondo state Office</span></div>
               </div>
             </div>
 
-            {/* Hot Stock Sidebar */}
-            <div className="hidden lg:block w-full max-w-sm bg-white/5 backdrop-blur-md rounded-[2.5rem] p-8 border border-white/10 shadow-2xl">
-              <h4 className="text-white font-black text-xl mb-6 flex items-center gap-2">
-                <Zap size={24} className="text-yellow-400" /> Hot Today
-              </h4>
-
-              {isInventoryLoading && inventory.length <= 13 ? (
-                <SidebarSkeleton />
-              ) : (
-                <>
-                  <div className="space-y-5">
-                    {hotToday.map(l => (
-                      <Link to={`/product/${l.id}`} key={l.id} className="flex gap-4 items-center bg-white/5 p-4 rounded-2xl border border-white/5 hover:bg-white/10 transition group">
-                        <img
-                          src={l.image || undefined}
-                          loading="lazy"
-                          className="w-16 h-16 rounded-xl object-cover group-hover:scale-105 transition"
-                          alt={l.name}
-                          onError={(e) => {
-                            (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&q=80&w=1000";
-                          }}
-                        />
-                        <div>
-                          <p className="text-white font-bold text-sm leading-tight mb-1">{l.name}</p>
-                          <p className="text-blue-300 font-black">{formatPrice(l.price)}</p>
-                        </div>
-                      </Link>
-                    ))}
-                  </div>
-                  <div className="mt-8 p-6 bg-yellow-400 rounded-2xl text-tech-blue text-center">
-                    <p className="font-black text-xs tracking-widest mb-1">PROMO ENDS IN:</p>
-                    <p className="text-3xl font-black tabular-nums tracking-widest">04:12:09</p>
-                  </div>
-                </>
-              )}
+            <div className="w-full lg:w-1/2 relative flex justify-center lg:justify-end">
+              <div className="relative w-full max-w-lg">
+                {/* Decorative background shapes */}
+                <div className="absolute top-0 -left-4 w-72 h-72 bg-blue-400/10 rounded-full mix-blend-multiply filter blur-2xl opacity-70"></div>
+                <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-500/10 rounded-full mix-blend-multiply filter blur-2xl opacity-70"></div>
+                <img
+                  src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&q=80&w=1000"
+                  alt="Premium Laptop Collection"
+                  className="relative z-10 w-full h-auto object-cover rounded-2xl shadow-2xl transform rotate-[-2deg] hover:rotate-0 transition-transform duration-500"
+                />
+              </div>
             </div>
           </div>
         </div>
