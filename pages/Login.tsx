@@ -30,7 +30,7 @@ const Login: React.FC = () => {
             <div className="relative bg-white rounded-[2.5rem] shadow-2xl p-10 max-w-md w-full text-center">
                 {/* Logo */}
                 <div className="flex items-center justify-center mb-8">
-                    <img src="/logo.png" alt="Giant edge technology" className="h-20 w-auto object-contain" />
+                    <img src="/giant_edge_logo.png" alt="Giant edge technology" className="h-20 w-auto object-contain" />
                 </div>
 
                 <div className="w-12 h-1 bg-tech-blue rounded-full mx-auto mb-8" />

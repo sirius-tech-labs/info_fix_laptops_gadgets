@@ -137,7 +137,7 @@ const InvoiceModal: React.FC<InvoiceModalProps> = ({ order, onClose }) => {
             <div className="flex flex-col md:flex-row justify-between items-start border-b-8 border-tech-blue pb-10 mb-12 gap-6">
               <div>
                 <div className="flex items-center mb-6">
-                  <img src="/logo.png" alt="Giant edge technology" className="h-20 w-auto object-contain" />
+                  <img src="/giant_edge_logo.png" alt="Giant edge technology" className="h-20 w-auto object-contain" />
                 </div>
                 <div className="space-y-1">
                   <p className="text-xs font-black text-gray-400 uppercase tracking-widest">Global Solutions Provider</p>

@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
         <div>
           <div className="flex items-center mb-6">
-            <img src="/logo.jpg?v=2" alt="Giant edge technology" className="h-16 w-auto object-cover rounded-md" />
+            <img src="/giant_edge_logo.png" alt="Giant edge technology" className="h-16 w-auto object-contain" />
           </div>
           <p className="text-blue-100 text-sm leading-relaxed mb-6">
             Premium Nigerian retailer specializing in high-quality tech solutions, laptop repairs, and digital services. We prioritize reliability, trust, and exceptional nationwide delivery.
