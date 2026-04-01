@@ -1,5 +1,5 @@
 // Basic Service Worker for Giant edge technology PWA
-const CACHE_NAME = 'wat-cache-v1';
+const CACHE_NAME = 'giant-edge-cache-v1';
 const OFFLINE_URL = '/';
 
 // Install: cache the shell
@@ -8,8 +8,7 @@ self.addEventListener('install', (event) => {
         caches.open(CACHE_NAME).then((cache) => {
             return cache.addAll([
                 OFFLINE_URL,
-                '/logo.png',
-                '/logo-white.png',
+                '/giant_edge_logo.png',
                 '/favicon.png',
             ]);
         })
