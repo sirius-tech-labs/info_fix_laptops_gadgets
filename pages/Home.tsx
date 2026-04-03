@@ -2,12 +2,14 @@
 import React, { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { Search, ChevronRight, ChevronLeft, CheckCircle2, Star, ShieldCheck, MapPin, Zap, Verified, Truck, MessageCircle } from 'lucide-react';
+import { Search, ChevronRight, ChevronLeft, CheckCircle2, Star, ShieldCheck, MapPin, Zap, Verified, Truck, MessageCircle, Sparkles } from 'lucide-react';
 import { LAPTOPS, TESTIMONIALS, formatPrice } from '../constants';
 import { Category } from '../types';
 import ProductCard from '../components/ProductCard';
 import { useCart } from '../context/CartContext';
 import { CategoryCarouselSkeleton, SidebarSkeleton } from '../components/LoadingSkeleton';
+import { HeroAIAdvisor } from '../components/HeroAIAdvisor';
+
 
 const CategoryCarousel: React.FC<{ title: string; category: Category }> = ({ title, category }) => {
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -95,6 +97,8 @@ const CategoryCarousel: React.FC<{ title: string; category: Category }> = ({ tit
 
 const Home: React.FC = () => {
   const { inventory, isInventoryLoading } = useCart();
+  const [showAIAdvisor, setShowAIAdvisor] = React.useState(false);
+
   const categories = [
     { title: "Student Laptops", cat: Category.STUDENT },
     { title: "Business & Work", cat: Category.BUSINESS },
@@ -128,21 +132,36 @@ const Home: React.FC = () => {
         <div className="absolute top-[60%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[750px] h-[180px] border border-blue-500/10 rounded-[100%] z-0" />
 
         {/* Content */}
-        <div className="max-w-4xl mx-auto px-4 relative z-10 text-center flex flex-col items-center mt-10">
-          <h1 className="text-5xl md:text-7xl lg:text-[5.5rem] font-medium text-white leading-[1.1] tracking-tight mb-8 drop-shadow-2xl font-sans">
+        <div className="max-w-4xl mx-auto px-4 relative z-10 text-center flex flex-col items-center mt-6">
+          <h1 className="text-5xl md:text-7xl lg:text-[5.5rem] font-medium text-white leading-[1.1] tracking-tight mb-6 drop-shadow-2xl font-sans">
             Powered by <br />
             Innovation, Perfected <br />
             with <span className="inline-flex items-center bg-tech-blue/20 rounded-2xl px-3 py-1 border border-tech-blue/30 backdrop-blur-sm -mb-2">Technology</span>
           </h1>
 
-          <p className="text-sm md:text-base text-gray-300 font-medium mb-12 max-w-xl mx-auto leading-relaxed drop-shadow-lg">
+          <p className="text-sm md:text-base text-gray-300 font-medium mb-8 max-w-xl mx-auto leading-relaxed drop-shadow-lg">
             At Giant edge technology, we blend modern innovation with trusted reliability to elevate your daily workflow, crafting laptops for extraordinary moments.
           </p>
 
-          <Link to="/shop" className="bg-white text-black px-8 py-3.5 rounded-full text-sm font-bold hover:bg-gray-200 transition-colors shadow-[0_0_30px_rgba(255,255,255,0.3)] flex items-center justify-center gap-2 group">
-            Shop Catalog <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="group-hover:translate-y-1 transition-transform"><path d="M12 5v14M19 12l-7 7-7-7" /></svg>
-          </Link>
+          <div className="flex flex-col sm:flex-row items-center gap-4 mb-4">
+            <Link to="/shop" className="bg-white text-black px-8 py-3.5 rounded-full text-sm font-bold hover:bg-gray-200 transition-colors shadow-[0_0_30px_rgba(255,255,255,0.3)] flex items-center justify-center gap-2 group">
+              Shop Catalog <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="group-hover:translate-y-1 transition-transform"><path d="M12 5v14M19 12l-7 7-7-7" /></svg>
+            </Link>
+
+            <button
+              onClick={() => setShowAIAdvisor(!showAIAdvisor)}
+              className="bg-tech-blue text-white px-8 py-3.5 rounded-full text-sm font-bold hover:bg-blue-600 transition-all shadow-[0_0_30px_rgba(59,130,246,0.3)] flex items-center justify-center gap-2 group border border-white/10"
+            >
+              <Sparkles size={18} className={showAIAdvisor ? "animate-pulse" : "group-hover:rotate-12 transition-transform"} />
+              {showAIAdvisor ? "Close AI Advisor" : "AI Advisor"}
+            </button>
+          </div>
+
+          {showAIAdvisor && (
+            <HeroAIAdvisor onClose={() => setShowAIAdvisor(false)} />
+          )}
         </div>
+
       </section>
 
 
