@@ -196,8 +196,8 @@ const Home: React.FC = () => {
                 <div className="flex gap-4 md:gap-6">
                   <div className="bg-blue-500/20 p-3 md:p-4 rounded-2xl md:rounded-3xl h-fit border border-white/5 shadow-inner flex-shrink-0"><MapPin className="text-blue-400" size={28} /></div>
                   <div>
-                    <h4 className="font-black text-lg md:text-xl mb-1">Physical Presence in 3 States</h4>
-                    <p className="text-blue-100/70 text-xs md:text-sm leading-relaxed">We are not "ghost" sellers. Visit our store at number 21 kuteyi street, owalusin iwaro oka akoko Ondo state to see and test before you pay.</p>
+                    <h4 className="font-black text-lg md:text-xl mb-1">Our Physical Store</h4>
+                    <p className="text-blue-100/70 text-xs md:text-sm leading-relaxed">Visit our store at number 21 kuteyi street, owalusin iwaro oka akoko Ondo state to see and test before you pay.</p>
                   </div>
                 </div>
                 <div className="flex gap-4 md:gap-6">
