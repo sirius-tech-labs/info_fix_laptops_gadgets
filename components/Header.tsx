@@ -57,7 +57,7 @@ const Header: React.FC = () => {
           <div className="flex justify-between h-16 items-center">
             {/* Logo */}
             <Link to="/" className="flex items-center flex-shrink-0 group gap-3">
-              <img src="/giant_edge_logo.png" alt="Giant edge technology" className="h-16 w-auto object-contain transition-transform" />
+              <img src="/giant_edge_logo.png" alt="GIANT EDGE TECHNOLOGIES" className="h-16 w-auto object-contain transition-transform" />
               <div className="hidden lg:flex flex-col -space-y-1">
                 <span className="text-lg font-black text-gray-900 tracking-tighter uppercase leading-none">Giant Edge</span>
                 <span className="text-[10px] font-black text-tech-blue tracking-widest uppercase leading-none">Technology</span>

@@ -111,7 +111,7 @@ const Home: React.FC = () => {
   return (
     <div className="space-y-12 md:space-y-24 pb-20 overflow-x-hidden">
       <Helmet>
-        <title>Giant edge technology | Premium Tech Store Nigeria</title>
+        <title>GIANT EDGE TECHNOLOGIES | Premium Tech Store Nigeria</title>
         <meta name="description" content="Buy affordable, high-quality UK-used and new laptops in Nigeria. Nationwide delivery, tested hardware, and trusted service in Ikeja Computer Village." />
       </Helmet>
       {/* Hero Section */}
@@ -140,7 +140,7 @@ const Home: React.FC = () => {
           </h1>
 
           <p className="text-sm md:text-base text-gray-300 font-medium mb-8 max-w-xl mx-auto leading-relaxed drop-shadow-lg">
-            At Giant edge technology, we blend modern innovation with trusted reliability to elevate your daily workflow, crafting laptops for extraordinary moments.
+            At GIANT EDGE TECHNOLOGIES, we blend modern innovation with trusted reliability to elevate your daily workflow, crafting laptops for extraordinary moments.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center gap-4 mb-4">
@@ -184,7 +184,7 @@ const Home: React.FC = () => {
         <div className="bg-tech-blue text-white rounded-[3rem] md:rounded-[4rem] p-8 md:p-24 overflow-hidden relative shadow-2xl">
           <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 items-center">
             <div>
-              <h2 className="text-3xl md:text-6xl font-black mb-8 md:mb-10 leading-[1.1] tracking-tighter">Why Thousands Choose Giant edge technology</h2>
+              <h2 className="text-3xl md:text-6xl font-black mb-8 md:mb-10 leading-[1.1] tracking-tighter">Why Thousands Choose GIANT EDGE TECHNOLOGIES</h2>
               <div className="space-y-6 md:space-y-8">
                 <div className="flex gap-4 md:gap-6">
                   <div className="bg-blue-500/20 p-3 md:p-4 rounded-2xl md:rounded-3xl h-fit border border-white/5 shadow-inner flex-shrink-0"><ShieldCheck className="text-blue-400" size={28} /></div>

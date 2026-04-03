@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
         <div>
           <div className="flex items-center mb-6">
-            <img src="/giant_edge_logo.png" alt="Giant edge technology" className="h-16 w-auto object-contain" />
+            <img src="/giant_edge_logo.png" alt="GIANT EDGE TECHNOLOGIES" className="h-16 w-auto object-contain" />
           </div>
           <p className="text-blue-100 text-sm leading-relaxed mb-6">
             Premium Nigerian retailer specializing in high-quality tech solutions, laptop repairs, and digital services. We prioritize reliability, trust, and exceptional nationwide delivery.
@@ -69,7 +69,7 @@ const Footer: React.FC = () => {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 pt-10 border-t border-blue-800/50 flex flex-col md:flex-row justify-between items-center gap-4 text-blue-300 text-xs">
-        <p>&copy; {new Date().getFullYear()} Giant edge technology. Trusted Retailer. All Rights Reserved.</p>
+        <p>&copy; {new Date().getFullYear()} GIANT EDGE TECHNOLOGIES. Trusted Retailer. All Rights Reserved.</p>
       </div>
     </footer>
   );
