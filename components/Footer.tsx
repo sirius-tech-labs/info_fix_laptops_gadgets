@@ -55,13 +55,13 @@ const Footer: React.FC = () => {
             <div className="absolute -top-10 -right-10 w-32 h-32 bg-blue-300/10 rounded-full blur-2xl group-hover:bg-blue-300/20 transition-colors" />
             <h4 className="font-black text-blue-300 text-xs uppercase tracking-[0.2em] mb-4">Words of Wisdom</h4>
             <p className="text-lg font-bold italic leading-relaxed text-white mb-6 relative z-10">
-              "There is plenty of room at the top because very few people care to travel beyond the average route."
+              "A SQL query walks into a bar, walks up to two tables, and asks... 'Can I join you?'"
             </p>
             <div className="flex items-center gap-3 border-t border-blue-800/50 pt-4">
-              <div className="w-8 h-8 rounded-full bg-blue-300/20 flex items-center justify-center text-[10px] font-black">NA</div>
+              <div className="w-8 h-8 rounded-full bg-blue-300/20 flex items-center justify-center text-[10px] font-black">DE</div>
               <div>
-                <p className="font-black text-xs text-white">Nnamdi Azikiwe</p>
-                <p className="text-[10px] text-blue-300 font-bold uppercase tracking-widest">First President of Nigeria</p>
+                <p className="font-black text-xs text-white">Database Engineer</p>
+                <p className="text-[10px] text-blue-300 font-bold uppercase tracking-widest">Master of Tables & Joins</p>
               </div>
             </div>
           </div>
