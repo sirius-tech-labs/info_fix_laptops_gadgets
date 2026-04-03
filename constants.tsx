@@ -269,12 +269,6 @@ export const TESTIMONIALS: Testimonial[] = [
   { id: '1', name: 'Tunde Adebayo', location: 'Lagos', text: 'GIANT EDGE TECHNOLOGIES delivered my HP EliteBook to Ikeja within 24 hours. The condition was exactly as described. Clean UK-used machine!', rating: 5 },
   { id: '2', name: 'Chioma Okeke', location: 'Abuja', text: 'Bought a ThinkPad for my coding bootcamp. Reliable service and the price was the best I found in Nigeria. No issues.', rating: 5 },
   { id: '3', name: 'Musa Ibrahim', location: 'Port Harcourt', text: 'Was worried about delivery but the packaging was very secure. Laptop arrived in perfect state. Highly trust GIANT EDGE TECHNOLOGIES.', rating: 5 },
-  { id: '4', name: 'Adaeze Nwankwo', location: 'Enugu', text: 'I ordered the Dell Latitude 7490 for my office work. The 16GB RAM handles everything I throw at it. Battery still lasts 4+ hours. Amazing value!', rating: 5 },
-  { id: '5', name: 'Femi Ogunlade', location: 'Ibadan', text: 'Third laptop I am buying from GIANT EDGE TECHNOLOGIES. My whole family now uses their laptops. The student deals are unbeatable in Nigeria.', rating: 5 },
-  { id: '6', name: 'Hauwa Bello', location: 'Kaduna', text: 'The AI Advisor recommended the perfect laptop for my daughter. She uses it for school and it runs smoothly. Great customer service too.', rating: 4 },
-  { id: '7', name: 'Emeka Obi', location: 'Benin City', text: 'I compared prices across Computer Village and online. GIANT EDGE TECHNOLOGIES gave me the best deal on the MacBook Pro. Genuine product, no stories.', rating: 5 },
-  { id: '8', name: 'Blessing Adekunle', location: 'Osogbo', text: 'Walked into their Osogbo branch and tested the laptop before paying. Transparent and honest business. Will definitely come back!', rating: 5 },
-  { id: '9', name: 'Yusuf Abubakar', location: 'Kano', text: 'They shipped my gaming laptop all the way to Kano safely. The Dell G3 runs GTA and FIFA perfectly. Worth every naira!', rating: 5 },
 ];
 
 export const formatPrice = (price: number) => {
