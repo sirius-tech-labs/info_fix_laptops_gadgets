@@ -218,10 +218,10 @@ const Home: React.FC = () => {
                 <div className="space-y-4 md:space-y-6 italic text-gray-600 leading-relaxed font-medium text-sm md:text-base">
                   <p>"The current batch of HP 840 G5 is incredibly solid. The aluminum unibody is perfect for Nigerians on the go. Battery health verified at 90%+ across all units. Highly recommended for business use."</p>
                   <div className="flex items-center gap-3 md:gap-4 mt-6 md:mt-8 border-t border-gray-100 pt-4 md:pt-6">
-                    <div className="w-10 h-10 md:w-14 md:h-14 bg-blue-50 rounded-full flex items-center justify-center font-black text-tech-blue text-base md:text-xl border-2 border-white shadow-sm">EE</div>
+                    <div className="w-10 h-10 md:w-14 md:h-14 bg-blue-50 rounded-full flex items-center justify-center font-black text-tech-blue text-base md:text-xl border-2 border-white shadow-sm">JO</div>
                     <div>
-                      <p className="font-black text-tech-blue not-italic text-base md:text-lg">Engr. Emeka</p>
-                      <p className="text-[9px] md:text-[10px] uppercase font-black text-gray-400 tracking-widest">Chief Tech, Giant edge technology</p>
+                      <p className="font-black text-tech-blue not-italic text-base md:text-lg">Engr. Joshua O</p>
+                      <p className="text-[9px] md:text-[10px] uppercase font-black text-gray-400 tracking-widest">Chief Tech, GIANT EDGE TECHNOLOGIES</p>
                     </div>
                   </div>
                 </div>
